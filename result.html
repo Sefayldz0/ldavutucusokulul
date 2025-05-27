@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Test Sonucu</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #ffffff, #999999);
+      padding: 40px;
+      text-align: center;
+    }
+    #charImg {
+      max-width: 700px;
+      border-radius: 20px;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>     </h1>
+  <h1 id="charName">Karakter Yükleniyor...</h1>
+  <img id="charImg" src="" alt="Karakter Fotoğrafı" />
+  <p id="charDesc"> </p>
+
+  <script>
+    const characters = {
+      Arda: {
+        name: "Arda Kurtuluş",
+        img: "char/arda.png",
+        desc: "" 
+      },
+      KArda: {
+        name: "Küçük Arda Kurtuluş ",
+        img: "char/küçükarda.png",
+        desc: "" 
+      },
+      Efe: {
+        name: "Ahmet Efe Elmas",
+        img: "char/efe.png",
+        desc: ""
+      },
+      Mustafa: {
+        name: "Mustafa Sığırtmaç",
+        img: "char/mustafa.png",
+        desc: ""
+      },
+      Sefa: {
+        name: "Sefa Yıldız",
+        img: "char/sefa.jpeg",
+        desc: ""
+      },
+      Enes: {
+        name: "Muhammed Enes Sağlam",
+        img: "char/enes.png",
+        desc: ""
+      },
+      Eren: {
+        name: "Yılmaz Eren Gençtürk",
+        img: "char/proeren.png",
+        desc: ""
+      },
+      Eren2: {
+        name: "Yılmaz Eren Gençtürk V2" ,
+        img: "char/eren.png",
+        desc: ""
+      },
+       Mert: {
+        name: "Mert Kadıoğlu",
+        img: "char/mert.png",
+        desc: ""
+      },
+        Afra: {
+        name: "Afranur Çelik",
+        img: "char/afra.png",
+        desc: ""
+      },
+        Emine: {
+        name: "Emine Çiftci",
+        img: "char/emine.jng",
+        desc: ""
+      }, 
+       Ceren: {
+        name: "Ceren Coşgun",
+        img: "char/ceren.png",
+        desc: ""
+      },  
+      Sıla: {
+        name: "Sılanur Durmuş",
+        img: "char/sıla.png",
+        desc: ""
+      },
+        Ceyda: {
+        name: "Ceyda Ünal",
+        img: "char/ceyda.png",
+        desc: ""
+      },
+        PembeFil: {
+        name: "Pembe Fil",
+        img: "char/PembefL.jpg",
+        desc: "Sağ beynini kullanan birisisin."
+      },
+         Volkank: {
+        name: "Volkan Konak",
+        img: "char/Volkancan.jpg",
+        desc: "Çok Tehlikeli. Dikkatli ol !"
+      },
+         Kufiçocuk: {
+        name: "Kufi Kafada Söyleyen Çocuk",
+        img: "char/kufi",
+        desc: "Elleri havada , kufi kafada"
+      },
+       Rafa: {
+        name: "Rafa Silva",
+        img: "char/RafaS.jpg",
+        desc: "27 Numara Rafaaa Silvaaaaaaa"
+      },
+      Saliha: {
+        name: "Ünlü Yazar Saliha Buzok",
+        img: "char/saliha.jpg",
+        desc: "Çok Şanslısın. Ünlü Yazar Saliha Buzok çıkmak senin için çok gurur verici olmalı. "
+      }
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const charKey = params.get("char");
+    const character = characters[charKey];
+
+    if(character) {
+      document.getElementById("charName").textContent = character.name;
+      document.getElementById("charImg").src = character.img;
+      document.getElementById("charDesc").textContent = character.desc;
+    } else {
+      document.getElementById("charName").textContent = "Geçersiz karakter.";
+      document.getElementById("charImg").style.display = "none";
+      document.getElementById("charDesc").textContent = "";
+    }
+  </script>
+</body>
+</html>

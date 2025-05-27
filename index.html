@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Davut Uçuş Okulu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      margin: 0;
+      background: linear-gradient(to right, #c556c9, #5facf9);
+      padding: 40px 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff0ff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 50px;
+      font-size: 36px;
+      color: #000000;
+    }
+    .question {
+      background: #ffffff;
+      padding: 25px;
+      margin-bottom: 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s;
+    }
+    .question:hover {
+      transform: scale(1.01);
+    }
+    .question img {
+      max-width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+    .options button {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Resim ile yazı arasında boşluk */
+  width: 100%;
+  margin-top: 12px;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #e0e0e0;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.options button img {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.options button:hover {
+  background: #d1c4e9;
+}
+
+.options button.selected {
+  background: #9575cd;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+    }
+    .options button:hover {
+      background: #d1c4e9;
+    }
+    .options button.selected {
+      background: #9575cd;
+      color: white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .submit {
+      margin-top: 50px;
+      text-align: center;
+    }
+    .submit button {
+      background: #7e57c2;
+      color: white;
+      padding: 18px 36px;
+      border: none;
+      border-radius: 12px;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .submit button:hover {
+      background: #673ab7;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Hangi Davut Uçuş Okulu Karakterisin ?</h1>
+
+    <div class="question" data-question="1">
+      <p>1. Cinsiyetin Nedir ?</p>
+      <div class="options">
+        <button data-characters="Arda,Efe,Sefa,Mustafa,Enes,Eren,Mert,Rafa,KArda"><img src="img/erkek.jpg" alt="erkek" width="34px" height="34px">Erkek</button>
+        <button data-characters="Afra,Ceren,Sıla,Emine,Ceyda"><img src="img/kadın.jpg" alt="kadın">Kadın</button>
+        <button data-characters="Volkank,PembeFil,Kufiçocuk,Saliha,proeren"><img src="img/belirtmekistemiyorum.jpg" alt="">Belirtmek İstemiyorum</button>
+      </div>
+    </div>
+   <div class="question" data-question="1">
+      <p>2. Arkadaşlarınla takılmak için nereye gitmeyi tercih edersin ?</p>
+      <div class="options">
+        <button data-characters="Enes,Ceyda">Maltepe Park Awm</button>
+        <button data-characters="Mustafa,Sıla,Ceren,Emine">Piazza Awm</button>
+        <button data-characters="Sefa,Arda,Efe,Emine,Sıla">Maltepe Sahil</button>
+        <button data-characters="Eren">Gebze</button>
+        <button data-characters="Ceyda,Mustafa">Kadıköy</button>
+        <button data-characters="Afra,Ceyda,Rafa,KArda">İstesem de Takılamam</button>
+        <button data-characters="Mert,PembeFil,Volkank,Kufiçocuk,Saliha,proeren">Takılmayı Sevmem</button>
+      </div>
+    </div>
+     <div class="question" data-question="1">
+      <p>3. Hangi rengi daha çok seviyorsun ?</p>
+      <div class="options">
+        <button data-characters="Mustafa,KArda"><img src="renk/mavi.png" alt="">Mavi</button>
+        <button data-characters="Sefa,Arda,Eren,Enes,Volkank,Kufiçocuk,Rafa"><img src="renk/siyah.png" alt="">Siyah</button>
+        <button data-characters="Afra,Sıla,Arda,Efe"><img src="renk/kırmızı.png" alt="">Kırmızı</button>
+        <button data-characters="Emine,PembeFil"><img src="renk/kırmızı.png" alt="">Pembe</button>
+        <button data-characters="Ceyda,Ceren,Efe,Saliha"><img src="renk/mor.png" alt="">Mor</button>
+        <button data-characters="Afra,Arda,Efe,Kufiçocuk,Rafa"><img src="renk/beyaz.png" alt="">Beyaz</button>
+        <button data-characters="Mert,Efe,proeren"><img src="renk/sarı.png" alt="">Sarı</button>
+      </div>
+    </div>
+    <div class="question" data-question="1">
+      <p>4. Adın Kaç Harfli ?</p>
+      <div class="options">
+        <button data-characters="Efe">3</button>
+        <button data-characters="Enes,Eren,Arda,Sefa,Afra,Mert,Sıla,Rafa,KArda">4</button>
+        <button data-characters="Ceyda,Ceren,Emine">5</button>
+        <button data-characters="Volkank,Kufiçocuk,PembeFil,Rafa,Saliha">6</button>
+        <button data-characters="Mustafa,proeren">7</button>
+      </div>
+    </div>
+    <div class="question" data-question="1">
+      <p>5. Hangi yastık daha güzel ?</p>
+      <div class="options">
+        <button data-characters="Kufiçocuk,Volkank"><img src="img/beyazyastık.png" alt="Beyaz">Beyaz Yastık</button>
+        <button data-characters="Emine,PembeFil"><img src="img/BarbieYastık.png" alt="">Barbie Yastık</button>
+        <button data-characters="Afra,Enes,Efe,Sefa,Rafa"><img src="img/BeşiktaşYastık.png" alt="">Beşiktaş Yastık</button>
+        <button data-characters="Arda,Sıla,KArda"><img src="img/fbyastık.png" alt="">Fenerbahçe Yastık</button>
+        <button data-characters="Eren,Saliha,proeren"><img src="img/gsyastık.png" alt="">Galatasaray Yastık</button>
+        <button data-characters="Mustafa,Ceyda,Mert,Ceren,Sıla"><img src="img/BoyunYastığı.png" alt="">Boyun Yastığı</button>
+      </div>
+    </div>
+    <div class="question" data-question="1">
+      <p>6. Canın sıkıldığında ne yaparsın ? </p>
+      <div class="options">
+        <button data-characters="Ceren,Afra,Ceyda">Sosyal medyada gezinirim.</button>
+        <button data-characters="Afra,Mert,Ceren,">İngilizce Çalışırım.</button>
+        <button data-characters="Emine,Efe,Eren,Mustafa">Yatarım.</button>
+        <button data-characters="Sefa,Mert,Efe">Oyun oynarım.</button>
+        <button data-characters="Arda,Sefa,Enes,Efe,Kufiçocuk">Müzik dinlerim.</button>
+        <button data-characters="KArda,proeren">Dizi/Film izlerim.</button>
+        <button data-characters="Sıla,Arda,PembeFil,Saliha">Kitap okurum.</button>
+        <button data-characters="Afra,Volkank">Dışarı çıkarım.</button>
+        <button data-characters="Enes,Rafa">Futbol oynarım.</button>
+      </div>
+    </div>
+    <div class="question" data-question="1">
+      <p>7. Hangi içeceği daha çok seversin ?</p>
+      <div class="options">
+        <button data-characters="Kufiçocuk,Afra,Eren,Mert"><img src="drink/TürkKahvesi.jpg" alt="">Türk Kahvesi</button>
+        <button data-characters="Mustafa,Enes,Sefa"><img src="drink/Süt.jpg" alt="">Süt</button>
+        <button data-characters="Arda,Rafa,Efe"><img src="drink/Kola.jpg" alt="">Kola</button>
+        <button data-characters="Sıla,Efe"><img src="drink/Limonata.jpg" alt="">Limonata</button>
+        <button data-characters="Enes,Rafa"><img src="drink/Su.jpg" alt="">Su</button>
+        <button data-characters="Emine,Afra,Ceren,Sıla,Sefa,Arda"><img src="drink/SoğukKahve.jpg" alt="">Soğuk Kahve</button>
+        <button data-characters="Kufiçocuk,PembeFil,Volkank"><img src="drink/VişneSuyu.jpg" alt="">Vişne Suyu</button>
+        <button data-characters="Mert,Afra,Saliha"><img src="drink/çay.jpg" alt="">Çay</button>
+        <button data-characters="Ceyda,Mustafa"><img src="drink/Yasak.jpg" alt="">Alkol</button>
+      </div>
+    </div>
+    <div class="question" data-question="1">
+      <p>8. Hangi emoji seni anlatıyor?</p>
+      <div class="options">
+        <button data-characters="Afra">😊</button>
+        <button data-characters="Efe">😢</button>
+        <button data-characters="Mustafa">🥸</button>
+        <button data-characters="Mert">😶‍🌫️</button>
+        <button data-characters="Sefa">😶</button>
+        <button data-characters="Arda">😭</button>
+        <button data-characters="Emine">☺️</button>
+        <button data-characters="Sıla">😜</button>
+        <button data-characters="Enes">😴</button>
+        <button data-characters="Ceren">🥳</button>
+        <button data-characters="Ceyda">🥴</button>
+        <button data-characters="Eren,proeren">🙃</button>
+        <button data-characters="Volkank">🌋</button>
+        <button data-characters="Kufiçocuk">🎶</button>
+        <button data-characters="Rafa,Sefa,Enes,Afra,Efe,KArda">🦅</button>
+        <button data-characters="PembeFil">🐘🩷</button>
+        <button data-characters="Saliha">📖</button>
+      </div>
+    </div>
+    <div class="question" data-question="1">
+      <p>9. Bir nesne olsaydın ne olurdun?</p>
+      <div class="options">
+        <button data-characters="Ceren,Afra,Eren,proeren">Akıllı Telefon</button>
+        <button data-characters="Mustafa,Enes">Güneş Gözlüğü</button>
+        <button data-characters="Saliha,Sıla,Afra,Arda">Kitap</button>
+        <button data-characters="Efe,Arda">Gitar</button>
+        <button data-characters="Arda,Efe,Sefa">Kulaklık</button>
+        <button data-characters="Mustafa,Sefa">Kamera</button>
+        <button data-characters="Emine">Peluş Oyuncak</button>
+        <button data-characters="Mert,Ceyda">Sarı Araba</button>
+        <button data-characters="Kufiçocuk,Volkank,PembeFil,KArda">Trolley</button>
+        <button data-characters="Rafa">Futbol Topu</button>
+      </div>
+    </div>
+    <div class="question" data-question="1">
+      <p>10. Canını en çok sıkacak olay hangisi ?</p>
+      <div class="options">
+        <button data-characters="Mustafa,Efe">Otobüsü kaçırmak</button>
+        <button data-characters="Sıla,Ceren,Emine">Telefon şarjının %1'e düşmesi</button>
+        <button data-characters="Afra,Eren">Dediğim sözün yapılmaması</button>
+        <button data-characters="Efe,Enes,Sefa">Uçakta bomba ihbarı</button>
+        <button data-characters="Kufiçocuk,Arda,Ceyda,Emine,PembeFil,Volkank,Sefa">Kufi söyleyen çocuk</button>
+        <button data-characters="Mert,Saliha">Araba'nın üzerine su sıçratması</button>
+        <button data-characters="Rafa,KArda">Boş kaleye gol atamamak</button>
+      </div>
+    </div>
+     <div class="question" data-question="1">
+      <p>11. En çok kimin konserine gitmek isterdin ?</p>
+      <div class="options">
+        <button data-characters="Arda,Efe,Enes,Sefa">Dolu Kadehi Ters Tut</button>
+        <button data-characters="Efe,Sefa">Adamlar</button>
+        <button data-characters="Mustafa,Enes">Yaşlı Amca</button>
+        <button data-characters="Ceyda">Mor ve Ötesi</button>
+        <button data-characters="Kufiçocuk,Ceren,Afra">Duman</button>
+        <button data-characters="Sıla,Emine">Mavi Gri</button>
+        <button data-characters="Sıla,Enes,Afra,Emine">Canozan</button>
+        <button data-characters="Rafa,PembeFil,Volkank,proeren">Eren Karayılan</button>
+        <button data-characters="Eren,Mert,Saliha">Gitmeyi istemem.</button>
+      </div>
+    </div>
+    <div class="question" data-question="1">
+      <p>12. Testin sonunda kim çıkmanı bekliyorsun ? </p>
+      <div class="options">
+        <button data-characters="Enes">Enes</button>
+        <button data-characters="Afra">Afra</button>
+        <button data-characters="Efe">Efe</button>
+        <button data-characters="Mustafa">Mustafa</button>
+        <button data-characters="Arda,KArda">Arda</button>
+        <button data-characters="Ceren">Ceren</button>
+        <button data-characters="Sıla">Sıla</button>
+        <button data-characters="Emine">Emine</button>
+        <button data-characters="Ceyda">Ceyda</button>
+        <button data-characters="Mert">Mert</button>
+        <button data-characters="Eren,proeren">Eren</button>
+        <button data-characters="Sefa">Sefa</button>
+      </div>
+    </div>
+    <div class="question" data-question="1">
+      <p>13. Ne yemek istersin ?</p>
+      <div class="options">
+        <button data-characters="Sıla,Mustafa,Ceyda"><img src="img/hamburger.jpg" alt="">Hamburger</button>
+        <button data-characters="Eren"><img src="img/pizza.jpg" alt="">Pizza</button>
+        <button data-characters="Enes"><img src="img/pide.jpg" alt="">Pide</button>
+        <button data-characters="Efe,Sefa,Arda,KArda"><img src="img/dürüm.jpg" alt="">Dürüm</button>
+        <button data-characters="Mert"><img src="img/makarna.jpg" alt="">Makarna</button>
+        <button data-characters="Emine,Afra,Ceren,Rafa"><img src="img/tatlı.jpg" alt="">Tatlı</button>
+      </div>
+    </div>
+     <div class="question" data-question="1">
+      <p>14. Rastgele bir sayı seç</p>
+      <div class="options">
+        <button data-characters="Afra">1</button>
+        <button data-characters="Arda,KArda">2</button>
+        <button data-characters="Efe">3</button>
+        <button data-characters="Emine">7</button>
+        <button data-characters="Sıla">13</button>
+        <button data-characters="Mert,Eren">19</button>
+        <button data-characters="Rafa,Enes,Sefa">27</button>
+        <button data-characters="Ceren">35</button>
+        <button data-characters="Mustafa">44</button>
+        <button data-characters="Ceyda">50</button>
+        <button data-characters="Volkank">52</button>
+        <button data-characters="PembeFil">57</button>
+        <button data-characters="Kufiçocuk">64</button>
+        <button data-characters="Saliha">73</button>
+      </div>
+    </div>
+     <div class="question" data-question="1">
+      <p>15. İfte 2025'te hangi stand başında olmak isterdin ?</p>
+      <div class="options">
+        <button data-characters="Sıla,Afra">Türk Hava Yolları</button>
+        <button data-characters="Efe,Mustafa,Mert">Pegasus</button>
+        <button data-characters="Eren,Ceyda">SunExpress</button>
+        <button data-characters="Emine,Volkank">Davut Uçuş Okulu</button>
+        <button data-characters="Ceren">Herkes için Havacılık Derneği</button>
+        <button data-characters="Sefa,Rafa">Türk Hava Kartalları</button>
+        <button data-characters="Enes,Arda">Solo Türk</button>
+        <button data-characters="Saliha,PembeFil,Kufiçocuk">Gedik Üniversitesi</button>
+      </div>
+    </div>
+     <div class="question" data-question="1">
+      <p>16. Hangisi daha güzel ?</p>
+      <div class="options">
+        <button data-characters="Eren,Sefa">Marmaray</button>
+        <button data-characters="Emine,Efe,Ceren,Sıla,Sefa,Enes,Mustafa">M4</button>
+        <button data-characters="Ceren,Efe">M8</button>
+        <button data-characters="Volkank">M1A</button>
+        <button data-characters="PembeFil">M1B</button>
+        <button data-characters="Sefa,Arda,Efe">M11</button>
+        <button data-characters="Kufiçocuk">M9</button>
+        <button data-characters="Rafa">F1</button>
+        <button data-characters="Saliha">M3</button>
+        <button data-characters="Afra,Mert">Metro kullanmam</button>
+      </div>
+    </div>
+    <div class="question" data-question="1">
+      <p>17. Kim çıkmayı bekliyorsun ?</p>
+      <div class="options">
+        <button data-characters="Efe">Efe</button>
+        <button data-characters="Mustafa">Mustafa</button>
+        <button data-characters="Ceren">Ceren</button>
+        <button data-characters="Afra">Afra</button>
+        <button data-characters="Ceyda">Ceyda</button>
+        <button data-characters="Emine">Emine</button>
+        <button data-characters="Sıla">Sıla</button>
+        <button data-characters="Eren">Eren</button>
+        <button data-characters="Afra">Afra</button>
+        <button data-characters="Enes">Enes</button>
+        <button data-characters="Sefa">Sefa</button>
+        <button data-characters="Mert">Mert</button>
+        <button data-characters="Arda">Arda</button>
+        <button data-characters="Rafa,PembeFil,Volkank,Saliha,Kufiçocuk">Diğer</button>
+      </div>
+    </div>
+ 
+    </div>
+
+    <!-- Diğer 15 soru buraya eklenecek -->
+
+    <div class="submit">
+      <button onclick="calculateResult()">Ben Kimim?</button>
+    </div>
+  </div>
+
+  <script>
+    const scores = {};
+
+    document.querySelectorAll('.options button').forEach(button => {
+      button.addEventListener('click', () => {
+        const siblings = button.parentElement.querySelectorAll('button');
+        siblings.forEach(btn => {
+          btn.disabled = true;
+          btn.classList.remove('selected');
+        });
+        button.classList.add('selected');
+
+        const chars = button.dataset.characters.split(',');
+        chars.forEach(c => {
+          scores[c] = (scores[c] || 0) + 1;
+        });
+      });
+    });
+
+    function calculateResult() {
+      const totalQuestions = document.querySelectorAll('.question').length;
+      const answered = document.querySelectorAll('button.selected').length;
+
+      if (answered < totalQuestions) {
+        alert('Lütfen tüm soruları cevaplayınız.');
+        return;
+      }
+
+      const sorted = Object.entries(scores).sort((a, b) => b[1] - a[1]);
+      const topCharacter = sorted[0][0];
+
+      window.location.href = `result.html?char=${topCharacter}`;
+    }
+  </script>
+</body>
+</html>
